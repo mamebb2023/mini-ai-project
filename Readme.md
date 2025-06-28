@@ -69,19 +69,19 @@ You can request to `https://localhost:8000/predict?text="I like this movie"`, th
 ```txt
 mini-ai-project/
 │
-├── data/ # Contains raw IMDb review data
-│ └── imdb/
-│ ├── train/
-│ │ ├── pos/ # 2500+ positive review .txt files
-│ │ └── neg/ # 2500+ negative review .txt files
-│ └── test/
-│ ├── pos/ # Test set positive reviews
-│ └── neg/ # Test set negative reviews
-│
-├── model/
-│ └── rating_model.pkl # Trained machine learning model
-│
-├── src/ # All core Python logic
+├── src/
+│ ├── data/ # Contains raw IMDb review data
+│ │ └── imdb/
+│ │ │ └── train/
+│ │ │ │ └── pos/ # 5000+ positive review .txt files
+│ │ │ │ └── neg/ # 5000+ negative review .txt files
+│ │ │ └── test/
+│ │ │ │ ├── pos/ # Test set positive reviews
+│ │ │ │ └── neg/ # Test set negative reviews
+│ │
+│ ├── model/
+│ │ └── rating_model.pkl # Trained machine learning model
+│ │
 │ ├── train.py # Trains and saves the regression model
 │ ├── predict.py # Loads model and predicts rating from input
 │ ├── utils.py # Text loading, preprocessing, and helpers
@@ -89,5 +89,6 @@ mini-ai-project/
 │
 ├── setup.py # CLI entry: train or run the app
 ├── requirements.txt # Project dependencies
-├── README.md # Main project documentation
+└── README.md # Main project documentation
+
 ```
