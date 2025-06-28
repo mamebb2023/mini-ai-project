@@ -1,8 +1,12 @@
 import os
 import re
 from sklearn.base import BaseEstimator, TransformerMixin
+import nltk
 from nltk.tokenize import word_tokenize
 import numpy as np
+
+
+nltk.download("punkt_tab", quiet=True)
 
 
 def extract_rating_from_filename(filename):

@@ -43,8 +43,8 @@ def main():
     mse = mean_squared_error(test_ratings, predictions)
     print(f"📊 MSE on test set: {mse:.2f}")
 
-    os.makedirs("model", exist_ok=True)
-    joblib.dump(model, "model/rating_model.pkl")
+    os.makedirs("src/model", exist_ok=True)
+    joblib.dump(model, "src/model/rating_model.pkl")
     print("✅ Model trained and saved to 'model/rating_model.pkl'")
 
 
